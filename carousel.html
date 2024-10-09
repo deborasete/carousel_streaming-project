@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .navbar-nav .nav-link.active {
+            color: #fff
+        }
+
+        .nav-link {
+            text-align: center;
+        }
+
+        section{
+            padding-top: 10px;
+        }
+
+        body > header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000; 
+        }
+
+        #cabecalho img {
+            width: 30px; 
+            height: auto;
+        }
+
+        #cabecalho h1 {
+            font-family: 'Poppins', sans-serif; 
+            font-size: 2.5rem;
+            font-weight: 600; 
+            color: #343a40; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px; 
+            margin: 0;
+        }
+
+        #carousel-exemplo {
+            position: relative;
+            width: 100%;
+        }
+
+        #carousel-exemplo img {
+            height: 440px; 
+            width: 100%;
+            object-fit: cover;
+            object-position: 55% 44%;
+        }
+
+        #imagem2 {
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 50% !important;
+        }
+
+        #imagem3 {
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 22% !important;                
+        }
+
+        #lancamentos {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #343a40; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            text-underline-offset: 7px;
+            text-decoration-thickness: 2px;
+            text-decoration-color: rgb(187, 184, 184);
+            background-color: #efeff3;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1 id="#inicio">OneStream</h1>
+                <img src="https://cdn-icons-png.flaticon.com/512/59/59219.png">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lancamentos">Lançamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-light text-black" href="#">Sign In</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="2000" class="scrollspy-example">
+        <section id="inicio" style="padding-top: 80px; margin-top: -80px;">
+            <h2></h2>
+        </section>
+    <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="4000" class="carousel-item active">
+                <img class="d-block w-100" src="https://m.media-amazon.com/images/M/MV5BNzNmMDBhYmUtN2NmMC00NjNkLWJjMjAtOWJkY2E2YWMzZDJkXkEyXkFqcGc@._V1_.jpg">
+                <div class="carousel-caption">
+                    <h2>Dark Matter - Apple TV</h2>
+                </div>
+            </div>
+            <div data-bs-interval="4000" class="carousel-item">
+                <img id="imagem2" class="d-block w-100" src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a/adb2cb0e95c813092d796e6ad78f72838c02dace.jpg?host=wbd-images.prod-vod.h264.io&partner=beamcom">
+                <div class="carousel-caption">
+                    <h2>The Last of Us - HBO Max</h2>
+                </div>
+            </div>
+            <div data-bs-interval="4000" class="carousel-item">
+                <img id="imagem3" class="d-block w-100 w-100" src="https://oldsiller.com.br/cdn/shop/articles/Estilo_masculino_peaky_blinders.jpg?v=1687810856">
+                <div class="carousel-caption">
+                    <h2>Peaky Blinders - Netflix</h2>
+                </div>
+            </div>
+        </div>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+    <section>
+        <section id="lancamentos" style="padding-top: 65px; margin-top: -70px;">
+            <h2></h2>
+        </section style="padding-top: 100px; margin-top: -40px;">
+        <h2 id="lancamentos" class="text-center my-4">Lançamentos</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            Apple TV 
+                        </header> 
+                        <img src="https://media.fstatic.com/tBdsh7HY9DOI7-3X2mTJ6SP4-AM=/322x478/smart/filters:format(webp)/media/movies/covers/2023/05/silo-poster-apple.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">Silo</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Conheça essa série surpreendente de ficção científica.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>  
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            Apple TV 
+                        </header> 
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDE5OTkxM2EtMDM1ZC00MDRlLWI5MTgtNjNkMzdlYzY0NzQ2XkEyXkFqcGc@._V1_.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">Ted Lasso</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Ted Lasso em uma grande série de comédia.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>  
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            Apple TV 
+                        </header> 
+                        <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2022/07/24/1319673955-see-poster-3.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">SEE</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Série pós-apocalíptica estrelada por Jason Momoa.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div> 
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            HBO Max 
+                        </header> 
+                        <img src="https://m.media-amazon.com/images/M/MV5BM2QzMGVkNjUtN2Y4Yi00ODMwLTg3YzktYzUxYjJlNjFjNDY1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">House of the Dragon</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Novo spin-off de Game of Thrones.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            HBO Max 
+                        </header> 
+                        <img src="https://m.media-amazon.com/images/I/91cO3KCMA2L._AC_UF1000,1000_QL80_.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">Succession</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Família, negóciose muitas crises em succession.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            HBO Max 
+                        </header> 
+                        <img src="https://br.web.img3.acsta.net/pictures/19/03/21/16/15/4239577.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">Game of Thrones</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Para maratonar todas as temporadas de GOT.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-300">
+                        <header class="card-header"> 
+                            Netflix 
+                        </header> 
+                        <img src="https://images.ctfassets.net/4cd45et68cgf/30ahhG9SI2h0qtMlIU8nXm/621568df5566b8f922239a8e94e2a0d2/EN-US_OPS1_Main_Illustrated_Vertical_27x40_RGB.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">One Piece</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                O tesouro que todos os piratas estão em busca.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            Netflix 
+                        </header> 
+                        <img src="https://blog.uceff.edu.br/wp-content/uploads/2019/02/poster-cartaz-breaking-bad-serie-netflix-sucesso.jpg" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">Breaking Bad</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                A história de Walter White e Jesse Pinkman.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <article class="card h-4000">
+                        <header class="card-header"> 
+                            Netflix 
+                        </header> 
+                        <img src="https://imaginus.ca/cdn/shop/products/81kVdgR745L._AC_SL1500.jpg?v=1642799943" style="height: 700px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title" style="flex-grow: 1;">Vikings</h4>
+                            <p class="card-text" style="flex-grow: 1;">
+                                Ragnar Lothbrok e a saga nórdica.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary mt-auto">Leia mais</a>
+                            </div>                            
+                        </div>
+                    </article>       
+                </div>
+                
+            </div>
+        </div>
+    </section>  
+    <script src="./lib/bootstrap.bundle.min.js"></script> 
+    <!-- <script>
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                const offsetPosition = targetElement.offsetTop - document.querySelector('header').offsetHeight;
+    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+    }); -->
+    </script>
+</body>
+</html>
